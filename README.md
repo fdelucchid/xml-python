@@ -106,6 +106,16 @@ En este caso accedemos a cada persona y a su primer elemento nombre. Con firstCh
 
 **xml.dom.minidom** es una implementacion en Python simplificada de DOM para manipular y crear árboles DOM.  
 
+### Implementacion en proyectos:  
+
+Implementar **minidom** en Python consta de 2 lineas para poder comenzar a utilizarlo:
+```python
+from xml.dom import minidom  
+asixDoc = minidom.parse("fichero.xml")
+```
+1. En la primera línea importamos el modulo **minidom** a nuestro proyecto Python
+2. En la segunda línea creamos una variable para parsear el documento XML y poder usar los diferentes objetos que definimos anteriormente
+
 ### Objetos de DOM que utilizamos:  
 
 `toxml()`
@@ -116,7 +126,6 @@ Ej:
 Como se puede ver simplemente nos devuelve toda la estructura XML del archivo  
 
 ![image](https://github.com/fdelucchid/xml-python/assets/152637933/be95be11-60fa-42e2-98a7-fac118a241f0)
-
 
 ## XML
 ### xpath
@@ -132,6 +141,7 @@ Como se puede ver simplemente nos devuelve toda la estructura XML del archivo
 * [xml.dom](https://docs.python.org/3/library/xml.dom.html#module-xml.dom)
 * [Documentacion DOM](https://www.w3.org/DOM/DOMTR)
 * [xml.dom.minidom](https://docs.python.org/es/3/library/xml.dom.minidom.html)
+* [Implementación minidom](https://docs.google.com/presentation/d/1RKl8dxmj_kwhCjW6GgQgRkpMt-mF62xMGLmMGdqeLn8/edit#slide=id.g2b5ce68c467_0_33)
 	
 | Column 1 | Column 2 | Column 3 |
 | -------- | -------- | -------- |
