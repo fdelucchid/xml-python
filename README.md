@@ -30,14 +30,7 @@ En **DOM** se representaría de la siguiente manera:
 > Todos los elementos de DOM son considerados objetos, a continuacion explicaré los que mas utilizamos. Cabe aclarar que dentro de los objetos existen diferentes grupos o clasificación para los mismos.
 
 ### Objetos de DOM que utilizamos:
-toxml()
-#### `Elemento`
-`Element.tagName`  
-Devuelve el valor en forma de cadena del nombre del elemento seleccionado  
-  
-Ej:  
-Partiendo del siguiente archivo XML:
-[^1]:
+Partimos del siguiente archivo XML para mostrar los ejemplos:
 ```xml 
 <example>
     <company>OpenAI</company>
@@ -56,19 +49,42 @@ Partiendo del siguiente archivo XML:
     </people>
 </example>
 ```
-Mediante el siguiente codigo de python parseamos el documento xml anterior, extraemos el nodo raiz y lo guardamos en una variable. Utilizando tagName podemos mostrar su valor en pantalla el cual se corresponde con el elemento example que es el valor que esperabamos obtener.
+
+#### `Elemento`
+`Element.tagName`  
+Devuelve el valor en forma de cadena del nombre del elemento seleccionado.  
+  
+Ej:  
+
+Mediante el siguiente codigo de python parseamos el documento XML anterior, extraemos el nodo raiz y lo guardamos en una variable. Utilizando tagName podemos mostrar su valor en pantalla el cual se corresponde con el elemento example que es el valor que esperabamos obtener.
 
 ![image](https://github.com/fdelucchid/xml-python/assets/152637933/ae698eb5-0ba7-4aed-aed2-aa8d986a0e49)
 
 
-`getAttribute()`  
+`getAttribute()`
+Devuelve el valor del atributo que indicamos entre los paréntesis y entre comillas. Si no existe o si el atributo no tiene valor te devuelve una cadena vacía.  
+
+Ej:  
+
 
 #### `Documento`
-`documentElement`  
+`documentElement`
+Se utiliza para obtener el nodo raíz del documento  
+
+Ej:  
+
+En este caso reiteramos para cada persona en la lista de personas que para cada nombre en cada persona la obtención del atributo y así devolver ambos y si hubieran mas personas seguiría siendo válido por lo que es escalable.  
+
+![image](https://github.com/fdelucchid/xml-python/assets/152637933/9434da1f-14b6-494b-be44-6682d73b88ee)
+
+En este caso el nodo raíz seria example el cual guardo en la variable nodoRoot y aprovecho luego a guardar el tagName en otra variable para mostrarlo por consola y que se vea el resultado  
+
+![image](https://github.com/fdelucchid/xml-python/assets/152637933/6c59c5de-ebae-4114-b8a4-c25bd0731614)
+
+
 `getElementsByTagName()`  
 Este elemento busca todos los descendientes de un elemento particular cuyo nombre indicamos en los paréntesis entre comillas y los guarda en una lista.  
 Ej:  
-Partiendo del mismo xml anterior  
 
 En este caso parseamos nuevamente el documento y guardamos en una variable la lista resultante del total de personas que en este caso serían 2 como se muestra cuando mostramos en pantalla la longitud de la lista personas.  
 
@@ -78,6 +94,30 @@ En este caso parseamos nuevamente el documento y guardamos en una variable la li
 
 #### `Nodo`
 `firstChild.data`  
+Este elemento refiere al primer hijo del nodo al que hace referencia es un atributo de solo lectura y el punto data se usa cuando queremos obtener el contenido de un nodo de tipo texto devolviendolo como una cadena.  
+
+Ej:  
+
+En este caso accedemos a cada persona y a su primer elemento nombre. Con firstChild accedemos al primer nodo hijo que en este caso es el del texto y con .data extraemos su valor en forma de cadena.  
+
+![image](https://github.com/fdelucchid/xml-python/assets/152637933/2459c13b-e363-45c4-af93-92ad6a41bd0c)
+
+### **`xml.dom.minidom`**  
+
+**xml.dom.minidom** es una implementacion en Python simplificada de DOM para manipular y crear árboles DOM.  
+
+### Objetos de DOM que utilizamos:  
+
+`toxml()`
+Este elemento devuelve una cadena que contiene toda la estructura del XML representada por el nodo DOM
+  
+Ej:  
+
+Como se puede ver simplemente nos devuelve toda la estructura XML del archivo  
+
+![image](https://github.com/fdelucchid/xml-python/assets/152637933/be95be11-60fa-42e2-98a7-fac118a241f0)
+
+
 ## XML
 ### xpath
 
@@ -91,6 +131,7 @@ En este caso parseamos nuevamente el documento y guardamos en una variable la li
 * [Estructura DOM](https://es.javascript.info/dom-nodes#un-ejemplo-del-dom)
 * [xml.dom](https://docs.python.org/3/library/xml.dom.html#module-xml.dom)
 * [Documentacion DOM](https://www.w3.org/DOM/DOMTR)
+* [xml.dom.minidom](https://docs.python.org/es/3/library/xml.dom.minidom.html)
 	
 | Column 1 | Column 2 | Column 3 |
 | -------- | -------- | -------- |
