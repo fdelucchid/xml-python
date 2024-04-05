@@ -239,6 +239,39 @@ En el archivo **XSL** hace falta:
 
 Estas lineas son para definir la hoja de estilos XSLT. Todo el contenido XSLT deberá ir dentro de estas líneas
 
+### Elementos dentro de *XSLT*  
+`<xsl:template>`  
+El elemento <xsl:template> se utiliza para crear plantillas en conjunto con el atributo match. El valor del atributo es una expresion de XPath, por eso la importancia de entenderlo previamente. Por ejemplo match="/" define todo el documento y  match=”/botiga” define a todos los elementos que hay dentro de botiga).  
+
+`<xsl:value-of>`  
+ El elemento <xsl:value-of> se utiliza para extraer el valor de un nodo seleccionado. Se puede utilizar para extraer el valor de un elemento XML y añadirlo al flujo de salida de la transformación  
+ 
+`<xsl:for-each>`  
+El elemento <xsl:for-each> nos permite realizar bucles en XSLT. Se puede utilizar para seleccionar todos los elementos XML de un conjunto de nodos especificado.  
+
+`<xsl:sort>`  
+El elemento <xsl:sort> se añade después del <xsl:for-each> y nos da una salida de los datos ordenada.
+
+`<xsl:if>`  
+El elemento <xsl:if> se añade después del <xsl:for-each> para poner una condición sobre el contenido del archivo XML.  
+
+`<xsl:choose>`  
+El elemento <xsl:choose> se utiliza junto a los elementos <xsl:when> y <xsl:otherwise> para obtener una condición múltiple.  
+
+`<xsl:attribute>`  
+El elemento <xsl:attribute> se utiliza junto con el nombre del atributo dentro de la misma etiqueta y en conjunto con <xsl:value-of> o texto normal para darle un valor a ese atributo. Ya que es un poco mas dificl de explciar con palabras a continuación un ejemplo de aplicación:  
+```html
+<img>
+      <xsl:attribute name="src">
+              <xsl:value-of select="/horari/@header" />
+       </xsl:attribute>
+       <xsl:attribute name="alt">imagen-header</xsl:attribute>
+</img>
+```  
+En este caso estamos creando un atributo para un elemento img de un html, el nombre va a ser src y su valor va a ser el valor del atributo header que extraemos con value-of.
+
+
+
 ---
 #### Bibliografía:
 * [Sintaxis Markdown](https://tutorialmarkdown.com/guia)
