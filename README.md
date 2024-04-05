@@ -219,7 +219,26 @@ Antes de explicar los elementos de XSLT es importante enteder **XPATH** ya que l
 | botiga//bluray | Indica todos los elemento bluray descendientes de botiga |
 | //@idioma | Indica todos los atributos idioma |
 
+### **XSLT**
+
+Volviendo a XSLT, para utilizarlo es necesario definir 2 líneas tanto en el XML que queremos leer como en el archivo de XSLT
+> Los archivos de *XSLT* tienen la extension .xsl
+
+En el archivo **XML** hace falta:  
   
+* `<?xml version="1.0" encoding="UTF-8"?>` Esta línea es la que ya hicimos mencion antes, en el apartado de XML  
+  
+* `<?xml-stylesheet type="text/xsl" href="/ruta/nombreFitcher.xsl"?>` En este caso vinculamos el fichero XML al archivo de XSL con el cual haremos la transformacion a un nuevo documento
+  
+En el archivo **XSL** hace falta:  
+  
+* `<?xml version="1.0" encoding="UTF-8"?>` Esta línea es la que ya hicimos mencion antes, en el apartado de XML  
+   
+* `<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">`
+* `</xsl:stylesheet>`
+
+Estas lineas son para definir la hoja de estilos XSLT. Todo el contenido XSLT deberá ir dentro de estas líneas
+
 ---
 #### Bibliografía:
 * [Sintaxis Markdown](https://tutorialmarkdown.com/guia)
