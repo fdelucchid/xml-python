@@ -175,11 +175,36 @@ Cabe destacar que los navegadores webs más habituales (Safari, Chrome, Firefox,
   
 ![image](https://github.com/fdelucchid/xml-python/assets/152637933/19486223-defa-4b68-b5a0-73e30c6d06c2)
 
+### **XPATH**
+Antes de explicar los elementos de XSLT es importante enteder **XPATH** ya que lo usaremos en conjunto con los mismos. **XPATH** es un lenguaje que se utiliza para navegar por los elementos XML.  
+* Define 7 tipos de nodos posibles:
+  
+	* Nodo raíz 
+	* Elementos 
+	* Atributos
+  	* Text
+  	* Espacio de nombres
+  	* Comentarios
+```xml
+<botiga>
+        <bluray>
+                <titol idioma=“català”>Avatar</titol>
+                <director>J. Cameron</director>
+                <preu>21</preu>
+                <any>2009</any>
+	</bluray>
+</botiga>
+```
+| Expresión | Descripción |
+| ----------- | ----------- |
+| Nombre del nodo | Indica todos los hijos del nombre del nodo |
+| / | Indica el elemento raíz |
+| // | Indica todos los elementos del documento |
+| . | Indica el nodo actual |
+| .. | Indica el padre del nodo |
+| @ | Indica el atributo |
 
-
-
-
-
+ /         
 ---
 #### Bibliografía:
 * [Sintaxis Markdown](https://tutorialmarkdown.com/guia)
@@ -190,12 +215,4 @@ Cabe destacar que los navegadores webs más habituales (Safari, Chrome, Firefox,
 * [xml.dom.minidom](https://docs.python.org/es/3/library/xml.dom.minidom.html)
 * [Implementación minidom](https://docs.google.com/presentation/d/1RKl8dxmj_kwhCjW6GgQgRkpMt-mF62xMGLmMGdqeLn8/edit#slide=id.g2b5ce68c467_0_33)
 * [Introduccion XML](https://drive.google.com/file/d/1kAUJYKPGADg22361tDcBYGchnbiCaQWt/view)
-	
-| Column 1 | Column 2 | Column 3 |
-| -------- | -------- | -------- |
-| Text     | Text     | Text     |
-
-asdasd
-* **Parametros:**
-    * **-verb**
-    * -noun
+* [Introduccion XPATH](https://drive.google.com/file/d/1EPZ_1F3WSPUh172alCskraO7mATTPQMD/view)
