@@ -127,10 +127,57 @@ Como se puede ver simplemente nos devuelve toda la estructura XML del archivo
 
 ![image](https://github.com/fdelucchid/xml-python/assets/152637933/be95be11-60fa-42e2-98a7-fac118a241f0)
 
-## XML
-### xpath
-
 ---
+
+## **XML** (Extensible Markup Language)  
+**XML** es un lenguaje de marcas, un lenguaje de marcas combina datos y etiquetas que las marcan y que contienen información adicional sobre la estructura del texto o su presentación.  
+  
+> A continuación un ejemplo de XML
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<empleados>
+  <empleado id="1">
+    <nombre>Juan Pérez</nombre>
+    <puesto>Desarrollador de software</puesto>
+    <salario>50000</salario>
+  </empleado>
+  <empleado id="2">
+    <nombre>Maria González</nombre>
+    <puesto>Gerente de Proyecto</puesto>
+    <salario>70000</salario>
+  </empleado>
+</empleados>
+```
+### Elementos dentro de un *XML*
+1. Declaración
+   
+	La primera línea es la de declaración y se usa para asegurar que los procesadores de XML puedan interpretar correctamente el documento y sus caracteres
+
+	* `?xml` Se utiliza para indicar que es una declaración XML
+	* `version="1.0"` Se utiliza para indicar que versión de XML usamos
+	* `encoding="UTF-8"` Se utiliza para indicar la codificación de los caracteres dentro del documento
+2. Etiquetas
+   
+	Las etiquetas tienen una estructura muy sencilla se escriben con una jerarquía de arbol y simplemente se incluye un `<` para iniciarla, el texto intermedio y un `>` para cerrarla. Cabe destacar que si creamos una etiqueta debemos cerrarla debajo con en su misma línea de tabulación. Como se puede ver en el ejemplo de empleados el cierre es practicamente igual que el inicio pero incluimos un `/` luego de el simbolo de inicio `<`, el mismo texto y su símbolo de cierre `>`
+
+3. Atributos
+
+	Los atributos se incluyen dentro de las etiquetas y consisten en un nombre y un valor, en ejemplo puede ser el de empleado:
+
+	`<empleado nombreAtributo="valorAtributo">`
+
+## **XSLT** (eXtensible Stylesheet Language Transformations)  
+**XSLT** Es un lenguaje para transformar documentos XML en otros documentos XML o en otros tipos de documentos (HTML, texto plano, o en formato XSL-FO). No necesariamente transforma solo XML pero es lo más común. El documento de entrada ya sea el XML o alternativas (C, C++, Java, Python, Perl, Javascript) no se altera, sino que se crea un nuevo documento a partir de el.
+Cabe destacar que los navegadores webs más habituales (Safari, Chrome, Firefox, Microsoft Edge, Opera,...) llevan un procesador de XSLT incorporado.
+
+> En nuestro caso solo utilizamos XSLT a partir de XML, a continuacion se muestra una imagen de su funcionamiento  
+  
+![image](https://github.com/fdelucchid/xml-python/assets/152637933/19486223-defa-4b68-b5a0-73e30c6d06c2)
+
+
+
+
 
 
 ---
@@ -142,6 +189,7 @@ Como se puede ver simplemente nos devuelve toda la estructura XML del archivo
 * [Documentacion DOM](https://www.w3.org/DOM/DOMTR)
 * [xml.dom.minidom](https://docs.python.org/es/3/library/xml.dom.minidom.html)
 * [Implementación minidom](https://docs.google.com/presentation/d/1RKl8dxmj_kwhCjW6GgQgRkpMt-mF62xMGLmMGdqeLn8/edit#slide=id.g2b5ce68c467_0_33)
+* [Introduccion XML](https://drive.google.com/file/d/1kAUJYKPGADg22361tDcBYGchnbiCaQWt/view)
 	
 | Column 1 | Column 2 | Column 3 |
 | -------- | -------- | -------- |
