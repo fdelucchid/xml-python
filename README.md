@@ -185,6 +185,9 @@ Antes de explicar los elementos de XSLT es importante enteder **XPATH** ya que l
   	* Text
   	* Espacio de nombres
   	* Comentarios
+
+> Ejemplo de XML para la siguiente explicación
+  
 ```xml
 <botiga>
         <bluray>
@@ -195,6 +198,7 @@ Antes de explicar los elementos de XSLT es importante enteder **XPATH** ya que l
 	</bluray>
 </botiga>
 ```
+  
 | Expresión | Descripción |
 | ----------- | ----------- |
 | Nombre del nodo | Indica todos los hijos del nombre del nodo |
@@ -202,9 +206,20 @@ Antes de explicar los elementos de XSLT es importante enteder **XPATH** ya que l
 | // | Indica todos los elementos del documento |
 | . | Indica el nodo actual |
 | .. | Indica el padre del nodo |
-| @ | Indica el atributo |
+| @ | Indica el atributo |  
 
- /         
+> Ejemplos sobre botiga con lo mencionado
+  
+| Expresión | Descripción |
+| ----------- | ----------- |
+| botiga | Indica todos los hijos del nombre de botiga |
+| / | Indica el elemento botiga |
+| botiga/bluray | Indica todos los elementos hijos de botiga que se llamen bluray |
+| //bluray | Indica todos los elementos bluray del documento |
+| botiga//bluray | Indica todos los elemento bluray descendientes de botiga |
+| //@idioma | Indica todos los atributos idioma |
+
+  
 ---
 #### Bibliografía:
 * [Sintaxis Markdown](https://tutorialmarkdown.com/guia)
@@ -215,4 +230,5 @@ Antes de explicar los elementos de XSLT es importante enteder **XPATH** ya que l
 * [xml.dom.minidom](https://docs.python.org/es/3/library/xml.dom.minidom.html)
 * [Implementación minidom](https://docs.google.com/presentation/d/1RKl8dxmj_kwhCjW6GgQgRkpMt-mF62xMGLmMGdqeLn8/edit#slide=id.g2b5ce68c467_0_33)
 * [Introduccion XML](https://drive.google.com/file/d/1kAUJYKPGADg22361tDcBYGchnbiCaQWt/view)
+* [Introduccion XSLT](https://drive.google.com/file/d/1DPOCh9ivLsYqKHWN2exdTVY96LhhdoOS/view)
 * [Introduccion XPATH](https://drive.google.com/file/d/1EPZ_1F3WSPUh172alCskraO7mATTPQMD/view)
